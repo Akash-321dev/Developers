@@ -1,0 +1,79 @@
+/* eslint-disable */
+/**
+ * Generated `api` utility.
+ *
+ * THIS CODE IS AUTOMATICALLY GENERATED.
+ *
+ * To regenerate, run `npx convex dev`.
+ * @module
+ */
+
+import type * as audit from "../audit.js";
+import type * as auth from "../auth.js";
+import type * as billing from "../billing.js";
+import type * as customers from "../customers.js";
+import type * as expenses from "../expenses.js";
+import type * as inventory from "../inventory.js";
+import type * as kot from "../kot.js";
+import type * as notifications from "../notifications.js";
+import type * as orders from "../orders.js";
+import type * as products from "../products.js";
+import type * as reports from "../reports.js";
+import type * as restaurants from "../restaurants.js";
+import type * as seed from "../seed.js";
+import type * as superadmin from "../superadmin.js";
+import type * as tables from "../tables.js";
+import type * as users from "../users.js";
+
+import type {
+  ApiFromModules,
+  FilterApi,
+  FunctionReference,
+} from "convex/server";
+
+declare const fullApi: ApiFromModules<{
+  audit: typeof audit;
+  auth: typeof auth;
+  billing: typeof billing;
+  customers: typeof customers;
+  expenses: typeof expenses;
+  inventory: typeof inventory;
+  kot: typeof kot;
+  notifications: typeof notifications;
+  orders: typeof orders;
+  products: typeof products;
+  reports: typeof reports;
+  restaurants: typeof restaurants;
+  seed: typeof seed;
+  superadmin: typeof superadmin;
+  tables: typeof tables;
+  users: typeof users;
+}>;
+
+/**
+ * A utility for referencing Convex functions in your app's public API.
+ *
+ * Usage:
+ * ```js
+ * const myFunctionReference = api.myModule.myFunction;
+ * ```
+ */
+export declare const api: FilterApi<
+  typeof fullApi,
+  FunctionReference<any, "public">
+>;
+
+/**
+ * A utility for referencing Convex functions in your app's internal API.
+ *
+ * Usage:
+ * ```js
+ * const myFunctionReference = internal.myModule.myFunction;
+ * ```
+ */
+export declare const internal: FilterApi<
+  typeof fullApi,
+  FunctionReference<any, "internal">
+>;
+
+export declare const components: {};
